@@ -1,34 +1,40 @@
-on: push
-#on:
-#  push:
-#    branches:
-#      - develop
-#  workflow_dispatch: {}
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch: {}
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+        fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
     - uses: actions/setup-python@v2
     - name: Build the site
       run: |
-        virtualenv --system-site-packages venv
+        # Set up a virtualenv
+        python -m venv venv
         source venv/bin/activate
         python setup.py develop
+        # Build the sites
         ./asknot-ng.py templates/index.html questions/fedora.yml l10n/fedora/locale --theme fedora
-    - name: Push changes
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Swap out code for build output
+      run: |
+        # Hide the build directory, destroy everything else, and unpack the build contents
+        mv build .build
+        git rm -rf .
+        mv .build/* .
+    - name: Commit files
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-
-        git clone https://user:$GITHUB_TOKEN@github.com/rh-impact/rh-impact.github.io
-
-        mv build/* rh-impact.github.io/.
-        cd rh-impact.github.io
-
-        git add .
-        git commit -m "Automated update from https://github.com/rh-impact/asknot-ng/actions"
-
-        git push --set-upstream origin
+        git add static/ en/
+        git commit -m "Automated update"
+    - name: Push changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: build
+        force: true
