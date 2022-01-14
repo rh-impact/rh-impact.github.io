@@ -9,7 +9,7 @@ setup(
     license='GPLv3+',
     author='Ralph Bean',
     author_email='rbean@redhat.com',
-    url='https://github.com/fedora-infra/asknot-ng',
+    url='https://github.com/rh-impact/asknot-ng',
     install_requires=[
         'mako',
         'PyYAML',

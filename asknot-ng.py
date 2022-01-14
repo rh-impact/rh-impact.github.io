@@ -117,7 +117,7 @@ def main(localedir, languages, strict, build, static, **kw):
 
     staticdir = os.path.abspath(static)
     global_staticdir = os.path.join(build, "static")
-    shutil.copytree(staticdir, global_staticdir, symlinks=True, dirs_exist_ok=True)
+    shutil.copytree(staticdir, global_staticdir, symlinks=True)
     print("Copied %s to %s" % (staticdir, global_staticdir))
 
 
