@@ -9,7 +9,7 @@ msgstr ""
 "PO-Revision-Date: 2021-12-02 19:16+0000\n"
 "Last-Translator: Jan Kuparinen <copper_fin@hotmail.com>\n"
 "Language-Team: Finnish <https://translate.fedoraproject.org/projects/"
-"fedora-infra/asknot-ng/fi/>\n"
+"rh-impact/asknot-ng/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1361,7 +1361,7 @@ msgstr "Verkkopalvelut"
 #. subtitle
 #: questions/includes/fedora/coding/python.yml:27
 msgid "Fedora Infrastructure team for the win"
-msgstr "Fedora-infrastruktuuritiimi voittoon"
+msgstr "rh-impactstruktuuritiimi voittoon"
 
 #. title
 #: questions/includes/fedora/coding/scala.yml:3

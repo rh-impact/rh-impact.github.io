@@ -40,4 +40,4 @@ tree:
         - title: AskNot Site
           subtitle: this thing -- the page you're looking at right now!
           image: https://badges.fedoraproject.org/pngs/rock-the-web.png
-          link: https://github.com/fedora-infra/asknot-ng
+          link: https://github.com/rh-impact/asknot-ng

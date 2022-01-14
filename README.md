@@ -1,6 +1,6 @@
 # asknot-ng
 
-[![Build Status](https://travis-ci.org/fedora-infra/asknot-ng.svg)](https://travis-ci.org/fedora-infra/asknot-ng)
+[![Build Status](https://travis-ci.org/rh-impact/asknot-ng.svg)](https://travis-ci.org/rh-impact/asknot-ng)
 
 Ask not what `$ORG` can do for you, but what you can do for `$ORG`.
 
@@ -26,7 +26,7 @@ that works like a static-site generator.  It takes as input three things:
 
 We have a [Fedora instance up and running][wcidff] if you’d like to poke it.
 
-[![Translation status](https://translate.fedoraproject.org/widgets/fedora-infra/-/asknot-ng/287x66-grey.png)](https://translate.fedoraproject.org/engage/fedora-infra/?utm_source=widget)
+[![Translation status](https://translate.fedoraproject.org/widgets/rh-impact/-/asknot-ng/287x66-grey.png)](https://translate.fedoraproject.org/engage/rh-impact/?utm_source=widget)
 
 ## Tools
 
@@ -54,7 +54,7 @@ Install the requirements, first.
 
 Clone the repo::
 
-    $ git clone https://github.com/fedora-infra/asknot-ng.git
+    $ git clone https://github.com/rh-impact/asknot-ng.git
     $ cd asknot-ng
 
 Create a virtualenv into which you can install the module.
@@ -150,10 +150,10 @@ Happy Hacking!
 
 [threebean]: http://threebean.org
 [fedora]: http://getfedora.org
-[example-questions]: https://github.com/fedora-infra/asknot-ng/blob/develop/questions/example.yml
-[fedora-questions]: https://github.com/fedora-infra/asknot-ng/blob/develop/questions/fedora.yml
-[default-template]: https://github.com/fedora-infra/asknot-ng/blob/develop/templates/index.html
-[requirements]: https://github.com/fedora-infra/asknot-ng/blob/develop/requirements.txt
+[example-questions]: https://github.com/rh-impact/asknot-ng/blob/develop/questions/example.yml
+[fedora-questions]: https://github.com/rh-impact/asknot-ng/blob/develop/questions/fedora.yml
+[default-template]: https://github.com/rh-impact/asknot-ng/blob/develop/templates/index.html
+[requirements]: https://github.com/rh-impact/asknot-ng/blob/develop/requirements.txt
 [patches]: https://help.github.com/articles/editing-files-in-another-user-s-repository/
 [wcidfm]: http://whatcanidoformozilla.org
 [wcidff]: http://whatcanidoforfedora.org

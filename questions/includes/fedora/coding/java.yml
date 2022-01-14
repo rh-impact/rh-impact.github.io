@@ -10,8 +10,8 @@ tree:
 
     - title: fedmsg-java
       subtitle: Interact with fedmsg from the JVM
-      link: https://github.com/fedora-infra/fedmsg-java
+      link: https://github.com/rh-impact/fedmsg-java
 
     - title: jenkins-fedmsg-emit
       subtitle: Send fedmsg messages related to Jenkins builds
-      link: https://github.com/fedora-infra/jenkins-fedmsg-emit
+      link: https://github.com/rh-impact/jenkins-fedmsg-emit

@@ -34,7 +34,7 @@ tree:
               link: https://qa.fedoraproject.org/blockerbugs/
             - title: Bodhi
               subtitle: the Fedora Updates System
-              link: https://github.com/fedora-infra/bodhi
+              link: https://github.com/rh-impact/bodhi
             - title: fedora-easy-karma
               subtitle: a handsome tool to ease testing updates
               link: https://fedoraproject.org/wiki/Fedora_Easy_Karma
