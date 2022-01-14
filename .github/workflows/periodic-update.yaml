@@ -21,10 +21,18 @@ jobs:
         python setup.py develop
         # Build the sites
         ./asknot-ng.py templates/index.html questions/fedora.yml l10n/fedora/locale --theme fedora
+    - name: Swap out code for build output
+      run: |
         # Hide the build directory, destroy everything else, and unpack the build contents
         mv build .build
-        rm -rf *
+        git rm -rf .
         mv .build/* .
+    - name: Commit files
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add static/ en/
+        git commit -m "Automated update"
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
