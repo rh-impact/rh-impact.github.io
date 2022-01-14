@@ -1379,7 +1379,7 @@ msgstr "Web-Dienste"
 #. subtitle
 #: questions/includes/fedora/coding/python.yml:27
 msgid "Fedora Infrastructure team for the win"
-msgstr "Das rh-impactstruktur-Team für den Erfolg"
+msgstr "Das Fedora-Infrastruktur-Team für den Erfolg"
 
 #. title
 #: questions/includes/fedora/coding/scala.yml:3
