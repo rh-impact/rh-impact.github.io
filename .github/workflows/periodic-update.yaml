@@ -25,6 +25,7 @@ jobs:
 
         git clone https://user:$GITHUB_TOKEN@github.com/rh-impact/rh-impact.github.io
 
+        rm -rf rh-impact.github.io/*
         mv build/* rh-impact.github.io/.
         cd rh-impact.github.io
 
