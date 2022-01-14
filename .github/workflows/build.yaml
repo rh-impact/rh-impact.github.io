@@ -19,7 +19,7 @@ jobs:
         source venv/bin/activate
         python setup.py develop
         # Build the sites
-        ./asknot-ng.py templates/index.html questions/fedora.yml l10n/fedora/locale --theme fedora
+        ./asknot-ng.py templates/index.html questions/rh-impact.yml l10n/fedora/locale --theme fedora
     - name: Swap out code for build output
       run: |
         # Hide the build directory, destroy everything else, and unpack the build contents
