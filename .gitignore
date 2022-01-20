@@ -11,4 +11,5 @@ venv
 container/l10n.conf
 .project
 .pydevproject
+**/*.swp
 
