@@ -169,10 +169,23 @@ body {
   z-index: 0;
 }
 
-.bandana .img img {
+.bandana .icon-box {
+  display: inline-block;
   z-index: -1;
   height: 400px;
-  width: 400px
+  width: 400px;
+  margin-top: -100px;
+  margin-bottom: -100px;
+  position: absolute;
+  right: 10%;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+.bandana .icon {
+  z-index: -1;
+  font-size: 180px;
+  margin: 100px 0;
 }
 
 /*
@@ -187,8 +200,8 @@ body {
 
 .mastfoot {
     height: 40px;
-    background-color: #51a2da;
-    border: 2px solid #51a2da;
+    background-color: black;
+    border: 2px solid black;
 /*    border-radius: 8px; */
 }
 
@@ -223,6 +236,10 @@ body {
     color: #3c6eb4;
     border-bottom: dashed 1px #3c6eb4;
     display: inline;
+}
+
+.text-dark-blue {
+	color: #294172;
 }
 
 /* Extra small devices (phones, 600px and down) */

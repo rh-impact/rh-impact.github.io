@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">  
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
     
     <script>
         var SEP = '${SEP}';
@@ -107,6 +108,10 @@
               </span>
               % if 'image' in node:
               <div class="img"><img src="${node['image']}"></div>
+              % endif
+              % if 'icon' in node:
+              <div class="icon-box "><i class="icon ${node['icon']} "></i></div>
+              
               % endif
             </div>
               % if 'children' in node:
