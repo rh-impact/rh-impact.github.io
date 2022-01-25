@@ -1,6 +1,6 @@
 title: What can I do for Red Hat Impact?
 description: What can I do for Red Hat Impact?
-favicon: https://getfedora.org/static/images/favicon.ico
+favicon: text-dark-blue https://getfedora.org/static/images/favicon.ico
 google-site-verification: a-S_XZt6rQej92LXTbscezXa1RLTN1KoaLoPUyvwAGM
 negatives:
     - "No"
@@ -33,94 +33,95 @@ tree:
     children:
         - title: Design!
           subtitle: pixel ninjas
-          image: https://badges.fedoraproject.org/pngs/design-team.png
+          icon: text-dark-blue fas fa-pencil-ruler
           segue1: So you enjoy working on the way users interact with websites and programs?
           segue2: How about the...
           children: includes/fedora/design.yml
 
         - title: Coding
           subtitle: hacking the gibson
-          image: https://badges.fedoraproject.org/pngs/fas-trust-me-i-know-what-i-am-doing.png
+          icon: text-dark-blue fad fa-laptop-code
           segue1: "Zeroes and ones #allday?  Me too."
           segue2: What's your favorite language?
           children: includes/fedora/coding.yml
 
         - title: Community Ops
           subtitle: connecting the dots
-          image: https://badges.fedoraproject.org/pngs/the-write-stuff.png
+          icon: text-dark-blue far fa-share-alt
           segue1: Have a knack for community-building?
           segue2: Would you like something more
           children: includes/fedora/community.yml
 
         - title: Writing
           subtitle: wordsmithery
-          image: https://badges.fedoraproject.org/pngs/the-write-stuff.png
+          icon: text-dark-blue far fa-pen-nib
           segue1: So, you have a way with words?
           segue2: Would you be more interested in...
           children: includes/fedora/writing.yml
 
         - title: Translation
           subtitle: we're an international effort, after all
-          image: https://badges.fedoraproject.org/pngs/irc-support-sig_member.png
+          icon: text-dark-blue far fa-language
           segue1: So you know more than one language?  We need you!
           segue2: Would you be more interested in...
           children: includes/fedora/translation.yml
 
         - title: Advocacy
           subtitle: spreading the good word
-          image: https://badges.fedoraproject.org/pngs/fedora-ambassador-mentor.png
+          icon: text-dark-blue fal fa-alicorn
           segue1: So you're a people person?
           segue2: How about becoming a Red Hat Impact...
           children: includes/fedora/advocacy.yml
 
         - title: Packaging
           subtitle: getting new software into Red Hat Impact
-          image: https://badges.fedoraproject.org/pngs/copr-build.png
+          icon: text-dark-blue fal fa-conveyor-belt
           segue1: So you want to help build the OS?  Excellent.
           segue2: Then you'll need to become a Red Hat Impact...
           children: includes/fedora/packaging.yml
 
         - title: QA and Testing
           subtitle: as they say, "if it's not tested, it's broken"
-          image: https://badges.fedoraproject.org/pngs/kernel-tester.png
+          icon: text-dark-blue far fa-tachometer-fastest
           segue1: So you like to push all the buttons and break all the things?
           segue2: Are you more interested in something...
           children: includes/fedora/qa.yml
 
         - title: Modularity
           subtitle: rethinking how we compose the distro
-          # image: https://docs.pagure.org/modularity/_static/logo.png
+          segue1: So you like to push all the buttons and break all the things?
+          icon: text-dark-blue fas fa-puzzle-piece
           link: https://docs.fedoraproject.org/en-US/modularity/community/
 
         - title: The Desktop
           subtitle: for those who are passionate about user and developer experience
-          # image: https://getfedora.org/static/images/logo-color-workstation.png
+          icon: text-dark-blue fal fa-desktop
           segue1: So you're into making the OS polished and easy to use?
           segue2: You probably want to join the Red Hat Impact...
           children: includes/fedora/desktop.yml
 
         - title: The Server
           subtitle: the best and latest for the datacenter
-          # image: https://getfedora.org/static/images/logo-color-server.png
+          icon: text-dark-blue fad fa-server
           segue1: So you're into making the OS powerful and flexible?
           segue2: You probably want to join the Red Hat Impact...
           children: includes/fedora/server.yml
 
         - title: The Cloud
           subtitle: it's where the future lives
-          # image: https://getfedora.org/static/images/logo-color-cloud.png
+          icon: text-dark-blue fad fa-cloud-upload-alt
           segue1: High-minded?
           segue2: You probably want to join the Red Hat Impact...
           children: includes/fedora/cloud.yml
 
         - title: Internationalization
           subtitle: making Red Hat Impact work better for all languages
-          image: https://badges.fedoraproject.org/pngs/irc-support-sig_member.png
+          icon: text-dark-blue fad fa-globe-asia
           segue1: Have a regional or world perspective?
           segue2: You probably want to join the Red Hat Impact...
           children: includes/fedora/i18n.yml
 
         - title: Instruction
-          image: https://badges.fedoraproject.org/pngs/sensei.png
+          icon: text-dark-blue fal fa-chalkboard-teacher
           subtitle: spread your knowledge to others in the community
           link: https://fedoraproject.org/wiki/Classroom
