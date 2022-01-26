@@ -18,10 +18,11 @@
     <link rel="stylesheet" type="text/css" href="../static/jquery.uls/css/jquery.uls.css">
     <link rel="stylesheet" type="text/css" href="../static/jquery.uls/css/jquery.uls.grid.css">
     <link rel="stylesheet" type="text/css" href="../static/jquery.uls/css/jquery.uls.lcd.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">  
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-2021.css">
     
     <script>
         var SEP = '${SEP}';
@@ -45,123 +46,119 @@
 
   <body>
 
-    <div class="site-wrapper">
+    <div class="w3-bar w3-black w3-center w3-display-container " style="height: 100px; ">
+      <div class="w3-display-left w3-padding ">
+        <img class="w3-img " style="width: 150px; " src="../static/themes/rh-impact/img/Logo-Red_Hat-Impact-Standard-RGB.png"/>
+      </div>
+      <div class="w3-display-middle w3-padding ">
+        % for info in navlinks:
+        <div
+        % if info['link'] == 'javascript:reloadHome();':
+        class="w3-bar-item active "
+        % else:
+        class="w3-bar-item "
+        % endif
+        ><a href="${info['link']}">${info['name']}</a>
+        </div>
+        % endfor
+      </div>
+    </div>
+    <div class="w3-content ">
 
-      <div class="site-wrapper-inner">
-
-        <div class="masthead clearfix">
-          <div class="inner">
-            <h3 class="masthead-brand">${title}</h3>
-            <nav>
-              <ul class="nav masthead-nav">
-                % for info in navlinks:
-                <li
-                % if info['link'] == 'javascript:reloadHome();':
-                class="active"
-                % endif
-                ><a href="${info['link']}" target="_blank">${info['name']}</a></li>
-                % endfor
-              </ul>
-            </nav>
+      <div id='js-warning'>
+        <div class=" panel panel-warning">
+          <div class="panel-heading clearfix">
+            <span class="pull-left">This page requires JavaScript</span>
+          </div>
+          <div class="panel-body">
+            <p class="lead">This page only works with JavaScript enabled.</p>
+            <p>If you have JavaScript disabled with a plugin like NoScript, please
+            disable that plugin and reload the page.  If you trust us, you
+            might find it convenient to enable JavaScript just
+            for this domain.</p>
+            <p>If you are opposed to JavaScript in principle, you're not left out!
+            You can read the page source to get at all the data.</p>
           </div>
         </div>
-
-        <div class="cover-container">
-
-          <div id='js-warning'>
-            <div class=" panel panel-warning">
-              <div class="panel-heading clearfix">
-                <span class="pull-left">This page requires JavaScript</span>
-              </div>
-              <div class="panel-body">
-                <p class="lead">This page only works with JavaScript enabled.</p>
-                <p>If you have JavaScript disabled with a plugin like NoScript, please
-                disable that plugin and reload the page.  If you trust us, you
-                might find it convenient to enable JavaScript just
-                for this domain.</p>
-                <p>If you are opposed to JavaScript in principle, you're not left out!
-                You can read the page source to get at all the data.</p>
-              </div>
-            </div>
-          </div>
+      </div>
 
 <%def name="card(node, next, segue1=None, segue2=None, toplevel=False)">
-          <div id="${node['id']}" class="cover hidden">
+      <div id="${node['id']}" class="cover w3-hide w3-padding-64 ">
 
+        <div class="w3-row w3-padding-16 ">
+          <div class="w3-threequarter ">
             % if segue1:
-            <p class="segue1">${segue1}</p>
+            <p class="w3-xlarge font-style-italic ">${segue1}</p>
             % endif
-
+    
             % if segue2:
-            <p class="segue2">${segue2}</p>
+            <p class="w3-xxlarge font-style-italic ">${segue2}</p>
             % endif
-
-            <div class="bandana">
-              <span class="main-text">
-                % if 'title' in node:
-                <h1 class="title">${node['title']}</h1>
-                % endif
-
-                % if 'subtitle' in node:
-                <p class="subtitle"><span>${node['subtitle']}</span></p>
-                % endif
-              </span>
-              % if 'image' in node:
-              <div class="img"><img src="${node['image']}"></div>
-              % endif
-              % if 'icon' in node:
-              <div class="icon-box "><i class="icon ${node['icon']} "></i></div>
-              % endif
-            </div>
-            % if 'description' in node:
-            <p class="description"><span>${node['description']}</span></p>
-            % endif
-              % if 'children' in node:
-              <p style="display:inline-block;" class="lead">
-                <a data-next="${node['children'][0]['id']}" target="_blank" class="yes btn btn-lg btn-success"><span class="fas fa-check-circle"></span> ${node['affirmative']}</a>
-              </p>
-              % else:
-              <p style="display:inline-block;" class="lead">
-                <a href="${node['link']}" target="_blank" class="btn btn-lg btn-success"><span class="fas fa-check-circle"></span> ${node['affirmative']}</a>
-              </p>
-              % endif:
-
-              % if next != node['id']:
-              <p style="display:inline-block;" class="lead">
-                <a data-next="${next}" class="nope btn btn-lg btn-danger"><span class="fas fa-times-circle"></span> ${node['negative']}</a>
-              </p>
-              % endif
-              % if not toplevel:
-              <p class="lead">
-                <a class="back btn btn-lg btn-warning"><span class="fas fa-arrow-alt-circle-left"></span> ${node['backlink']}</a>
-              </p>
-              % endif
-            </div>
-
-          % if 'children' in node:
-            % for i, child in enumerate(node['children']):
-${card(child, node['children'][(i + 1) % len(node['children'])]['id'], segue1=node.get('segue1'), segue2=node.get('segue2'))}
-            % endfor
-          % endif
-</%def>
-
-          % for i, child in enumerate(tree['children']):
-${card(child, tree['children'][(i + 1) % len(tree['children'])]['id'], segue1=tree.get('segue1'), segue2=tree.get('segue2'), toplevel=True)}
-          % endfor
-
+          </div>
         </div>
 
+        <div style="border-bottom: dashed 1px #3c6eb4;">
+          <div class="bandana w3-row w3-padding-16 ">
+            <div class="w3-threequarter w3-mobile main-text ">
+              % if 'title' in node:
+              <h1 class="w3-jumbo w3-text-2017-navy-peony font-weight-bold ">${node['title']}</h1>
+              % endif
+
+              % if 'subtitle' in node:
+              <p class="w3-xxlarge w3-text-2017-marina "><span>${node['subtitle']}</span></p>
+              % endif
+            </div>
+            % if 'image' in node:
+            <div class="w3-quarter w3-mobile w3-padding-16 img "><img src="${node['image']}"></div>
+            % endif
+            % if 'icon' in node:
+            <div class="w3-quarter w3-mobile w3-padding-16 "><i class="icon ${node['icon']} "></i></div>
+            % endif
+          </div>
+          % if 'description' in node:
+          <p class="description"><span>${node['description']}</span></p>
+          % endif
+        </div>
+        <div class="w3-row w3-padding-16 ">
+          <div class="w3-threequarter w3-center ">
+            % if 'children' in node:
+              <a data-next="${node['children'][0]['id']}" target="_blank" class="yes w3-margin w3-btn w3-round-large font-weight-bold w3-light-green w3-text-white w3-border w3-border-color-green "><span class="fas fa-check-circle"></span> ${node['affirmative']}</a>
+            % else:
+              <a href="${node['link']}" target="_blank" class="w3-margin w3-btn w3-round-large font-weight-bold w3-light-green w3-text-white w3-border w3-border-color-green "><span class="fas fa-check-circle"></span> ${node['affirmative']}</a>
+            % endif:
+  
+            % if next != node['id']:
+              <a data-next="${next}" class="nope w3-margin w3-btn w3-round-large font-weight-bold w3-pink w3-text-white w3-border w3-border-color-red "><span class="fas fa-times-circle"></span> ${node['negative']}</a>
+            % endif
+          </div>
+          <div class="w3-threequarter w3-center ">
+            % if not toplevel:
+              <a class="back w3-margin w3-btn w3-round-large font-weight-bold w3-orange w3-text-white w3-border w3-border-color-deep-orange "><span class="fas fa-arrow-alt-circle-left"></span> ${node['backlink']}</a>
+            % endif
+          </div>
+        </div>
       </div>
 
-      <div class="mastfoot">
-        <p>Generated by <a href="https://github.com/rh-impact/asknot-ng">asknot-ng</a>,
-        written by <a href="http://threebean.org">Ralph Bean</a> and <a
-          href="https://github.com/rh-impact/asknot-ng/graphs/contributors">others</a>.
-        Inspired by <a href="http://whatcanidoformozilla.org">the
-        original</a>.
-        <span class="active uls-trigger lang-dropdown">Change Language</span></p>
-      </div>
+     % if 'children' in node:
+       % for i, child in enumerate(node['children']):
+${card(child, node['children'][(i + 1) % len(node['children'])]['id'], segue1=node.get('segue1'), segue2=node.get('segue2'))}
+        % endfor
+      % endif
+</%def>
 
+      % for i, child in enumerate(tree['children']):
+${card(child, tree['children'][(i + 1) % len(tree['children'])]['id'], segue1=tree.get('segue1'), segue2=tree.get('segue2'), toplevel=True)}
+      % endfor
+
+    </div>
+
+    <div class="w3-bar w3-black w3-center w3-padding ">
+      <p>Generated by <a href="https://github.com/rh-impact/asknot-ng">asknot-ng</a>,
+      written by <a href="http://threebean.org">Ralph Bean</a> and <a
+        href="https://github.com/rh-impact/asknot-ng/graphs/contributors">others</a>.
+      Inspired by <a href="http://whatcanidoformozilla.org">the
+      original</a>.
+      <span class="active uls-trigger lang-dropdown">Change Language</span></p>
     </div>
 
     <!-- <script src="../static/jquery/js/jquery-2.1.3.min.js"></script> -->
