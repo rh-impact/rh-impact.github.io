@@ -301,6 +301,26 @@ tree:
                     icon: w3-text-2017-navy-peony far fa-text
                     link: https://github.com/greenpeace/planet4/issues/162
                     id: 162
+    
+
+              - title: WebDev
+                subtitle: Can you help Greenpeace build their website? 
+                segue1: So you are ready to build some website content? 
+                segue2: Let's find where to get started. 
+                icon: w3-text-2017-navy-peony far fa-file-edit
+                children:
+
+                  - title: PHP 8 Job
+                    subtitle: PLANET-5434 Add php-8.0 job to our repos CI
+                    icon: w3-text-2017-navy-peony fab fa-php
+                    link: https://github.com/greenpeace/planet4/issues/90
+                    id: 90
+
+                  - title: Be Right Back Page
+                    subtitle: Help designing the "Be Right Back" page
+                    icon: w3-text-2017-navy-peony fad fa-browser
+                    link: https://github.com/greenpeace/planet4/issues/106
+                    id: 106
 
       - title: The Code
         subtitle: Helping with the code
