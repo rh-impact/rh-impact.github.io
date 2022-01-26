@@ -14,7 +14,7 @@ import yaml
 # Lists of translatable strings so we know what to extract at extraction time
 # and so we know what to translate at render time.
 translatable_collections = ['negatives', 'affirmatives', 'backlinks']
-translatable_fields = ['title', 'description', 'segue1', 'segue2', 'subtitle']
+translatable_fields = ['title', 'description', 'segue1', 'segue2', 'subtitle', 'negative', 'affirmative']
 
 if sys.version_info[0] == 2:
     string_types = (basestring,)
@@ -143,8 +143,10 @@ def prepare_tree(data, node, parent=None, seen=None, _=lambda x: x):
     seen.append(node['id'])
 
     # Choose random text for our navigation buttons for this node.
-    node['affirmative'] = random.choice(data['affirmatives'])
-    node['negative'] = random.choice(data['negatives'])
+    if not node.get('affirmative'):
+        node['affirmative'] = random.choice(data['affirmatives'])
+    if not node.get('negative'):
+        node['negative'] = random.choice(data['negatives'])
     node['backlink'] = random.choice(data['backlinks'])
 
     # Propagate parent images to children unless otherwise specified.
