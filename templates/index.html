@@ -88,11 +88,13 @@
         <div class="w3-row w3-padding-16 ">
           <div class="w3-threequarter ">
             % if segue1:
-            <p class="w3-xlarge font-style-italic ">${segue1}</p>
+            <p class="w3-hide-small w3-xlarge font-style-italic ">${segue1}</p>
+            <p class="w3-hide-medium w3-hide-large font-style-italic ">${segue1}</p>
             % endif
     
             % if segue2:
-            <p class="w3-xxlarge font-style-italic ">${segue2}</p>
+            <p class="w3-hide-small w3-xxlarge font-style-italic ">${segue2}</p>
+            <p class="w3-hide-medium w3-hide-large w3-large font-style-italic ">${segue2}</p>
             % endif
           </div>
         </div>
@@ -101,11 +103,13 @@
           <div class="bandana w3-row w3-padding-16 ">
             <div class="w3-threequarter w3-mobile main-text ">
               % if 'title' in node:
-              <h1 class="w3-jumbo w3-text-2017-navy-peony font-weight-bold ">${node['title']}</h1>
+              <h1 class="w3-hide-small w3-jumbo w3-text-2017-navy-peony font-weight-bold ">${node['title']}</h1>
+              <h1 class="w3-hide-medium w3-hide-large w3-xlarge w3-text-2017-navy-peony font-weight-bold ">${node['title']}</h1>
               % endif
 
               % if 'subtitle' in node:
-              <p class="w3-xxlarge w3-text-2017-marina "><span>${node['subtitle']}</span></p>
+              <p class="w3-hide-small w3-xxlarge w3-text-2017-marina "><span>${node['subtitle']}</span></p>
+              <p class="w3-hide-medium w3-hide-large w3-large w3-text-2017-marina "><span>${node['subtitle']}</span></p>
               % endif
             </div>
             % if 'image' in node:
