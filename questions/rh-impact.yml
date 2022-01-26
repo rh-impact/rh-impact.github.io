@@ -31,97 +31,169 @@ tree:
     segue1: Want to help Red Hat Impact?  Tell me...
     segue2: what's your area of interest?
     children:
-        - title: Design!
-          subtitle: pixel ninjas
-          icon: text-dark-blue fas fa-pencil-ruler
-          segue1: So you enjoy working on the way users interact with websites and programs?
-          segue2: How about the...
-          children: includes/fedora/design.yml
 
-        - title: Coding
-          subtitle: hacking the gibson
-          icon: text-dark-blue fad fa-laptop-code
-          segue1: "Zeroes and ones #allday?  Me too."
-          segue2: What's your favorite language?
-          children: includes/fedora/coding.yml
+      - title: Desire
+        subtitle: Helping with the cause, or helping with the code
+        negative: The Code
+        affirmative: The Cause
+        segue1: Here are the current organizations and social innovation causes we are currently helping with. 
+        segue2: What cause would you like to help? 
+        icon: text-dark-blue fal fa-ribbon
+        children:
+    
+          - title: Serratus
+            subtitle: Would you like to help uncover Earth's viruses? 
+            description: An open-science collaboration to uncover Earth's viruses with ultra-deep search
+            segue1: So you're interested in viruses?
+            segue2: Come work with big data
+            icon: text-dark-blue fad fa-viruses
+            children:
 
-        - title: Community Ops
-          subtitle: connecting the dots
-          icon: text-dark-blue far fa-share-alt
-          segue1: Have a knack for community-building?
-          segue2: Would you like something more
-          children: includes/fedora/community.yml
+              - title: Databases
+                subtitle: Can you help Serratus query virus data? 
+                segue1: So you're a database wizard? 
+                segue2: Come work with some big data. 
+                icon: text-dark-blue fad fa-database
+                children:
 
-        - title: Writing
-          subtitle: wordsmithery
-          icon: text-dark-blue far fa-pen-nib
-          segue1: So, you have a way with words?
-          segue2: Would you be more interested in...
-          children: includes/fedora/writing.yml
+                  - title: R-SQL
+                    subtitle: R/Shiny development of the R-SQL interface for querying Serratus genome data
+                    icon: text-dark-blue fad fa-search-edit
+                    link: "https://github.com/serratus-bio/tantalus"
 
-        - title: Translation
-          subtitle: we're an international effort, after all
-          icon: text-dark-blue far fa-language
-          segue1: So you know more than one language?  We need you!
-          segue2: Would you be more interested in...
-          children: includes/fedora/translation.yml
+              - title: WebDev
+                subtitle: Can you help Serratus develop a website? 
+                segue1: So you're a website genius? 
+                segue2: Come build a new website with Serratus. 
+                icon: text-dark-blue fad fa-browser
+                children:
 
-        - title: Advocacy
-          subtitle: spreading the good word
-          icon: text-dark-blue fal fa-alicorn
-          segue1: So you're a people person?
-          segue2: How about becoming a Red Hat Impact...
-          children: includes/fedora/advocacy.yml
+                  - title: Genomic Data WebDev
+                    subtitle: Website development of analysis / genomic data exploration tools
+                    icon: text-dark-blue fad fa-dna
+                    link: "https://github.com/serratus-bio/serratus.io"
+    
+          - title: OpenLearnX
+            subtitle: Would you like to help bring online education to the world? 
+            description: The Education Technology Commons is a community where educators, learners and organizations can build, share, and re-use open learning resources, and participate in open learning practices.
+            segue1: So you're interested in education?
+            segue2: Get connected with Openlearnx
+            children:
 
-        - title: Packaging
-          subtitle: getting new software into Red Hat Impact
-          icon: text-dark-blue fal fa-conveyor-belt
-          segue1: So you want to help build the OS?  Excellent.
-          segue2: Then you'll need to become a Red Hat Impact...
-          children: includes/fedora/packaging.yml
+              - title: Website Content
+                subtitle: Can you help Openlearnx spread the word? 
+                segue1: So you are ready to build some website content? 
+                segue2: Let's find where to get started. 
+                icon: text-dark-blue far fa-file-edit
+                children:
 
-        - title: QA and Testing
-          subtitle: as they say, "if it's not tested, it's broken"
-          icon: text-dark-blue far fa-tachometer-fastest
-          segue1: So you like to push all the buttons and break all the things?
-          segue2: Are you more interested in something...
-          children: includes/fedora/qa.yml
+                  - title: Website Content - Copy
+                    subtitle: Copywriting - Can you write a compelling case for the open licensing of educational resources?
+                    icon: text-dark-blue fad fa-file-certificate
+                    link: "https://github.com/ActiveLearningStudio/rh-team-19/issues/1"
 
-        - title: Modularity
-          subtitle: rethinking how we compose the distro
-          segue1: So you like to push all the buttons and break all the things?
-          icon: text-dark-blue fas fa-puzzle-piece
-          link: https://docs.fedoraproject.org/en-US/modularity/community/
+                  - title: Website Blogs and Articles
+                    subtitle: Copywriting - We need to explain and broadcast the mission, the value, and the rewards of OER.
+                    icon: text-dark-blue fad fa-blog
+                    link: "https://github.com/ActiveLearningStudio/rh-team-19/issues/2"
 
-        - title: The Desktop
-          subtitle: for those who are passionate about user and developer experience
-          icon: text-dark-blue fal fa-desktop
-          segue1: So you're into making the OS polished and easy to use?
-          segue2: You probably want to join the Red Hat Impact...
-          children: includes/fedora/desktop.yml
-
-        - title: The Server
-          subtitle: the best and latest for the datacenter
-          icon: text-dark-blue fad fa-server
-          segue1: So you're into making the OS powerful and flexible?
-          segue2: You probably want to join the Red Hat Impact...
-          children: includes/fedora/server.yml
-
-        - title: The Cloud
-          subtitle: it's where the future lives
-          icon: text-dark-blue fad fa-cloud-upload-alt
-          segue1: High-minded?
-          segue2: You probably want to join the Red Hat Impact...
-          children: includes/fedora/cloud.yml
-
-        - title: Internationalization
-          subtitle: making Red Hat Impact work better for all languages
-          icon: text-dark-blue fad fa-globe-asia
-          segue1: Have a regional or world perspective?
-          segue2: You probably want to join the Red Hat Impact...
-          children: includes/fedora/i18n.yml
-
-        - title: Instruction
-          icon: text-dark-blue fal fa-chalkboard-teacher
-          subtitle: spread your knowledge to others in the community
-          link: https://fedoraproject.org/wiki/Classroom
+      - title: The Code
+        subtitle: Helping with the code
+        segue1: So you want to write some code... 
+        segue2: what's your area of interest?
+        link: https://github.com/serratus-bio
+        children:
+            - title: Design!
+              subtitle: pixel ninjas
+              icon: text-dark-blue fas fa-pencil-ruler
+              segue1: So you enjoy working on the way users interact with websites and programs?
+              segue2: How about the...
+              children: includes/fedora/design.yml
+    
+            - title: Coding
+              subtitle: hacking the gibson
+              icon: text-dark-blue fad fa-laptop-code
+              segue1: "Zeroes and ones #allday?  Me too."
+              segue2: What's your favorite language?
+              children: includes/fedora/coding.yml
+    
+            - title: Community Ops
+              subtitle: connecting the dots
+              icon: text-dark-blue far fa-share-alt
+              segue1: Have a knack for community-building?
+              segue2: Would you like something more
+              children: includes/fedora/community.yml
+    
+            - title: Writing
+              subtitle: wordsmithery
+              icon: text-dark-blue far fa-pen-nib
+              segue1: So, you have a way with words?
+              segue2: Would you be more interested in...
+              children: includes/fedora/writing.yml
+    
+            - title: Translation
+              subtitle: we're an international effort, after all
+              icon: text-dark-blue far fa-language
+              segue1: So you know more than one language?  We need you!
+              segue2: Would you be more interested in...
+              children: includes/fedora/translation.yml
+    
+            - title: Advocacy
+              subtitle: spreading the good word
+              icon: text-dark-blue fal fa-alicorn
+              segue1: So you're a people person?
+              segue2: How about becoming a Red Hat Impact...
+              children: includes/fedora/advocacy.yml
+    
+            - title: Packaging
+              subtitle: getting new software into Red Hat Impact
+              icon: text-dark-blue fal fa-conveyor-belt
+              segue1: So you want to help build the OS?  Excellent.
+              segue2: Then you'll need to become a Red Hat Impact...
+              children: includes/fedora/packaging.yml
+    
+            - title: QA and Testing
+              subtitle: as they say, "if it's not tested, it's broken"
+              icon: text-dark-blue far fa-tachometer-fastest
+              segue1: So you like to push all the buttons and break all the things?
+              segue2: Are you more interested in something...
+              children: includes/fedora/qa.yml
+    
+            - title: Modularity
+              subtitle: rethinking how we compose the distro
+              segue1: So you like to push all the buttons and break all the things?
+              icon: text-dark-blue fas fa-puzzle-piece
+              link: https://docs.fedoraproject.org/en-US/modularity/community/
+    
+            - title: The Desktop
+              subtitle: for those who are passionate about user and developer experience
+              icon: text-dark-blue fal fa-desktop
+              segue1: So you're into making the OS polished and easy to use?
+              segue2: You probably want to join the Red Hat Impact...
+              children: includes/fedora/desktop.yml
+    
+            - title: The Server
+              subtitle: the best and latest for the datacenter
+              icon: text-dark-blue fad fa-server
+              segue1: So you're into making the OS powerful and flexible?
+              segue2: You probably want to join the Red Hat Impact...
+              children: includes/fedora/server.yml
+    
+            - title: The Cloud
+              subtitle: it's where the future lives
+              icon: text-dark-blue fad fa-cloud-upload-alt
+              segue1: High-minded?
+              segue2: You probably want to join the Red Hat Impact...
+              children: includes/fedora/cloud.yml
+    
+            - title: Internationalization
+              subtitle: making Red Hat Impact work better for all languages
+              icon: text-dark-blue fad fa-globe-asia
+              segue1: Have a regional or world perspective?
+              segue2: You probably want to join the Red Hat Impact...
+              children: includes/fedora/i18n.yml
+    
+            - title: Instruction
+              icon: text-dark-blue fal fa-chalkboard-teacher
+              subtitle: spread your knowledge to others in the community
+              link: https://fedoraproject.org/wiki/Classroom

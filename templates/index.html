@@ -111,9 +111,11 @@
               % endif
               % if 'icon' in node:
               <div class="icon-box "><i class="icon ${node['icon']} "></i></div>
-              
               % endif
             </div>
+            % if 'description' in node:
+            <p class="description"><span>${node['description']}</span></p>
+            % endif
               % if 'children' in node:
               <p style="display:inline-block;" class="lead">
                 <a data-next="${node['children'][0]['id']}" target="_blank" class="yes btn btn-lg btn-success"><span class="fas fa-check-circle"></span> ${node['affirmative']}</a>
