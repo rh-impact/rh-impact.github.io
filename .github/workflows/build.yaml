@@ -32,7 +32,7 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add static/ en/
+        git add static/ en/ index.html
         git commit -m "Automated update"
     - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
