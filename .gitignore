@@ -12,4 +12,5 @@ container/l10n.conf
 .project
 .pydevproject
 **/*.swp
+.pydevproject.bak
 

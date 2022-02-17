@@ -6,6 +6,7 @@ import os
 import random
 import subprocess as sp
 import sys
+import copy
 
 import mako.template
 import pkg_resources
@@ -14,7 +15,7 @@ import yaml
 # Lists of translatable strings so we know what to extract at extraction time
 # and so we know what to translate at render time.
 translatable_collections = ['negatives', 'affirmatives', 'backlinks']
-translatable_fields = ['title', 'description', 'segue1', 'segue2', 'subtitle', 'negative', 'affirmative']
+translatable_fields = ['title', 'description', 'segue1', 'segue2', 'subtitle', 'negative', 'affirmative', 'nextChildLink']
 
 if sys.version_info[0] == 2:
     string_types = (basestring,)
@@ -104,6 +105,8 @@ def slugify(title, seen):
         '+': 'plus',
         '!': 'exclamation',
         ',': 'comma',
+        '?': 'question',
+        '/': 'forwardslash',
         '\'': 'apostrophe',
     }
     for left, right in replacements.items():
@@ -111,6 +114,22 @@ def slugify(title, seen):
     while idx in seen:
         idx = idx + hashlib.md5(idx.encode('utf-8')).hexdigest()[0]
     return idx
+
+def prepare_code_items(data):
+    """ Utility method for cloning items from causes and placing them in code categories automatically. 
+    """
+    for codeGroup in data['tree']['children'][1]['children']:
+        for causeGroup in data['tree']['children'][0]['children']:
+            for causeCodeGroup in causeGroup['children']:
+                if causeCodeGroup['title'] == codeGroup['title']:
+                    newCodeCauseGroupChildren = []
+                    if causeCodeGroup.get('children'):
+                        for group in causeCodeGroup['children']:
+                            newCodeCauseGroupChildren.append(copy.deepcopy(group))
+                    newCodeCauseGroup = causeGroup.copy()
+                    codeGroup['children'].append(newCodeCauseGroup)
+                    if newCodeCauseGroupChildren:
+                        newCodeCauseGroup['children'] = newCodeCauseGroupChildren
 
 
 def prepare_tree(data, node, parent=None, seen=None, _=lambda x: x):
@@ -156,6 +175,19 @@ def prepare_tree(data, node, parent=None, seen=None, _=lambda x: x):
     # Recursively apply this logic to all children of this node.
     for i, child in enumerate(node.get('children', [])):
         node['children'][i] = prepare_tree(data, child, parent=node, seen=seen, _=_)
+
+    return node
+
+def prepare_next_child(data, node, parent=None, seen=None, _=lambda x: x):
+    """ Utility method for "enhancing" the data in the question tree with the id of the next child.
+    """
+    # Recursively apply this logic to all children of this node.
+    for i, child in enumerate(node.get('children', [])):
+        node['children'][i] = prepare_next_child(data, child, parent=node, seen=seen, _=_)
+    if parent and parent.get('children') and len(parent.get('children')) > 1 and parent.get('children')[1].get('children'):
+        node['nextChild'] = parent['children'][1]['children'][0].get('id')
+    if node.get('nextChildLink') == None:
+        node['nextChildLink'] = False
 
     return node
 
