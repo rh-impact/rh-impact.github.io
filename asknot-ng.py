@@ -19,7 +19,9 @@ from asknot_lib import (
     defaults,
     load_template,
     load_yaml,
+    prepare_code_items,
     prepare_tree,
+    prepare_next_child,
     gather_ids,
     produce_graph,
 )
@@ -42,7 +44,9 @@ def work(question_filename, template, lang, languages, graph, build, _, **kw):
 
     data = load_yaml(question_filename)
 
+    prepare_code_items(data)
     data['tree'] = prepare_tree(data, data['tree'], _=_)
+    prepare_next_child(data, data['tree'], _=_)
     data['all_ids'] = list(gather_ids(data['tree']))
     data['all_ids_as_json'] = json.dumps(data['all_ids'], indent=4)
     data['tree_as_json'] = json.dumps(data['tree'], indent=4)
@@ -117,6 +121,7 @@ def main(localedir, languages, strict, build, static, **kw):
 
     staticdir = os.path.abspath(static)
     global_staticdir = os.path.join(build, "static")
+    shutil.rmtree(global_staticdir)
     shutil.copytree(staticdir, global_staticdir, symlinks=True)
     shutil.copyfile(os.path.join(staticdir, 'index.html'), os.path.join(build, 'index.html'))
     print("Copied %s to %s" % (staticdir, global_staticdir))

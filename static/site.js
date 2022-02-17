@@ -43,6 +43,16 @@ $(document).ready(function() {
     });
 
     // Wire up the "nope" links
+    $("a.nextChild").click(function(event) {
+        $(this).parent().parent().parent().addClass('w3-hide');
+        var next = $(this).attr('data-next');
+        var nextChild = $(this).attr('data-nextchild');
+        $('#' + nextChild).removeClass('w3-hide');
+        var original = location.href.replace(/\/$/, "");
+        history.pushState({}, '', original.substring(0, original.lastIndexOf(SEP)) + SEP + next + SEP + nextChild);
+    });
+
+    // Wire up the "nope" links
     $("a.nope").click(function(event) {
         $(this).parent().parent().parent().addClass('w3-hide');
         var next = $(this).attr('data-next');
