@@ -1,3 +1,11 @@
+# TLDR
+
+```bash
+install -d ~/.local/src/rh-impact.github.io
+git clone git@github.com:rh-impact/rh-impact.github.io.git ~/.local/src/rh-impact.github.io
+cd ~/.local/src/rh-impact.github.io
+rm -rf build && ./asknot-ng.py templates/index.html questions/rh-impact.yml l10n/fedora/locale --theme rh-impact
+```
 # asknot-ng
 
 [![Build Status](https://travis-ci.org/rh-impact/asknot-ng.svg)](https://travis-ci.org/rh-impact/asknot-ng)
