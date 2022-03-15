@@ -1,6 +1,6 @@
 title: What can I do for Red Hat Impact?
 description: What can I do for Red Hat Impact?
-favicon: w3-text-2017-navy-peony https://getfedora.org/static/images/favicon.ico
+favicon: ../static/themes/rh-impact/img/favicon.ico
 google-site-verification: a-S_XZt6rQej92LXTbscezXa1RLTN1KoaLoPUyvwAGM
 negatives:
     - "No"
@@ -147,7 +147,252 @@ tree:
                     subtitle: Copywriting - We need to explain and broadcast the mission, the value, and the rewards of OER.
                     icon: w3-text-2017-navy-peony fad fa-blog
                     link: https://github.com/ActiveLearningStudio/rh-team-19/issues/2
+
+                  - title: Website Instructional, Informational Videos
+                    subtitle: Videography - If a picture is worth a thousand words, what is a video worth? If this is your bag, we need you to enhance the project’s messaging! 
+                    icon: w3-text-2017-navy-peony fad fa-camera-movie
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Website - Terms of Service and Privacy Policy
+                    subtitle: Copywriting - A site without solid terms is a site asking for trouble.  But how do we make it simple, understandable and keep the open spirit within it?
+                    icon: w3-text-2017-navy-peony fad fa-spell-check
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Website - Collateral Development
+                    subtitle: Publishing, Copywriting - Blurbs, articles, newsletters, ads? Can you help us spread the word?
+                    icon: w3-text-2017-navy-peony fad fa-nfc-pen
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Website - Webmaster/CMS Management
+                    subtitle: WordPress Webmaster - OPENLEARNX needs a home. We need a webmaster. Is that the (red) hat you want to wear?
+                    icon: w3-text-2017-navy-peony fad fa-folder-gear
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Build the Open Practices Academy Learning Modules
+                    subtitle: If you are a seasoned instructional technologist, a subject matter expert on open practices, or want to contribute and would like to learn how to turn passive instruction and presentations into ACTIVE LEARNING EXPERIENCES, you’ve found a home.
+                    icon: w3-text-2017-navy-peony fad fa-chalkboard-user
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+              - title: Marketing
+                subtitle: Great projects require great leadership
+                icon: w3-text-2017-navy-peony fad fa-bullseye-pointer
+                segue1: Help plan and execute the launch. 
+                segue2: Steer the design, and get the word out! 
+                children:
+
+                  - title: Product - Campaign/Editorial Calendar Development
+                    subtitle: Marketing/Social Media/CRM
+                    icon: w3-text-2017-navy-peony fad fa-calendar-lines-pen
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Product - Project Co-Manager
+                    subtitle: Agile/Scrum/Project Management
+                    icon: w3-text-2017-navy-peony fad fa-clipboard-list
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Product - Website Design/Information Architecture
+                    subtitle: Ui/Ux/Design/Information Architecture
+                    icon: w3-text-2017-navy-peony fad fa-compass-drafting
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Product - Launch Planning
+                    subtitle: Product Management
+                    icon: w3-text-2017-navy-peony fad fa-rocket-launch
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Product - Vision and Roadmap Refinement
+                    subtitle: Product Management
+                    icon: w3-text-2017-navy-peony fad fa-map-location-dot
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Product - User Feedback Loop Planning
+                    subtitle: Product Management
+                    icon: w3-text-2017-navy-peony fad fa-ear-listen
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+        
+              - title: WebDev
+                subtitle: Can you help  develop a website? 
+                segue1: So you're a website genius? 
+                segue2: Come build a new website. 
+                icon: w3-text-2017-navy-peony fad fa-browser
+                children:
+
+                  - title: UI/UX Design - Resource Library
+                    subtitle: UI/UX Design - Work with the UI/UX team to help design and define the public experience of the repository.
+                    icon: w3-text-2017-navy-peony fad fa-browser
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Resource Browsing API
+                    subtitle: PHP/MySQL - Help extend the project’s API to allow browsing global learning resources.
+                    icon: w3-text-2017-navy-peony fad fa-folder-tree
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Elastic Stack  Visualizations Design/Dev
+                    subtitle: Elastic Stack/Kibana - Help analyze and build visualizations of search and log activity.
+                    icon: w3-text-2017-navy-peony fad fa-chart-mixed
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Notification Engine Design/Dev/Optimization
+                    subtitle: REDIS - Help advance the platform’s caching and message brokerage subsystems.
+                    icon: w3-text-2017-navy-peony fad fa-message-bot
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Browse Interface Implementation
+                    subtitle: WordPress/Genesis - If front end development is your passion, this is your gig.
+                    icon: w3-text-2017-navy-peony fad fa-sidebar
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Search Interface Implementation
+                    subtitle: WordPress/Genesis - What’s a robust backend without an elegant front end? 
+                    icon: w3-text-2017-navy-peony fad fa-magnifying-glass-plus
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Event Streaming Optimization for xAPI events
+                    subtitle: Apache Kafka - It’s all about speed and performance. And you know it.
+                    icon: w3-text-2017-navy-peony fad fa-messages
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
     
+              - title: Mobile Apps
+                subtitle: Can you help build a mobile application? 
+                segue1: So you're a mobile application builder? 
+                segue2: Come build a new mobile app. 
+                icon: w3-text-2017-navy-peony fad fa-mobile
+                children:
+
+                  - title: Standalone H5P implementation
+                    subtitle: Apache Kafka - Cordova (Android & IoS) - Interesting project to run Ht\5P activities on a mobile device standalone.
+                    icon: w3-text-2017-navy-peony fad fa-mp3-player
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Web/Mobile app - UI/UX Design
+                    subtitle: UI/UX
+                    icon: w3-text-2017-navy-peony fad fa-mobile-screen
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Mobile app - Learning Resource mobile delivery
+                    subtitle: Cordova
+                    icon: w3-text-2017-navy-peony fad fa-mobile-signal
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Web/Mobile app - Learning Resource acquisition
+                    subtitle: Cordova
+                    icon: w3-text-2017-navy-peony fad fa-laptop-mobile
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Mobile app - Mobile app - Learning Resource activity tracking
+                    subtitle: Cordova
+                    icon: w3-text-2017-navy-peony fad fa-mobile-signal-out
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Mobile app - Learner activity sync
+                    subtitle: Cordova
+                    icon: w3-text-2017-navy-peony fad fa-laptop-arrow-down
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: PHP/Drupal/jQuery - Learning Activity Development
+                    subtitle: Drupal - Build a new simulation/learning experience using the H5P framework
+                    icon: w3-text-2017-navy-peony fad fa-chart-network
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+              - title: Databases
+                subtitle: It's all about the data
+                segue1: Reporting, Big data, Location Data. 
+                segue2: Predictive analysis, data mining, and more. 
+                icon: w3-text-2017-navy-peony fad fa-database
+                children:
+
+                  - title: DB Optimization for content authoring
+                    subtitle: PostgreSQL DBA - Review and optimize physical and logical schema used for authoring 
+                    icon: w3-text-2017-navy-peony fad fa-database
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: DB Optimization for xAPI experience API
+                    subtitle: PostgreSQL DBA
+                    icon: w3-text-2017-navy-peony fad fa-album-collection
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Conversion from MySQL to Postgres for Tsugi runtime
+                    subtitle: PostgreSQL/MySQL
+                    icon: w3-text-2017-navy-peony fad fa-send-back
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+              - title: The Cloud
+                subtitle: it's where the future lives
+                icon: w3-text-2017-navy-peony fad fa-cloud-upload-alt
+                segue1: High-minded?
+                segue2: Let's deploy to OpenShift. 
+                children:
+
+                  - title: Deploy latest OpenShift on IBM Cloud
+                    subtitle: Kubernetes/OpenShift - Deploy OpenShift on the project’s IBM Cloud account.
+                    icon: w3-text-2017-navy-peony fab fa-redhat
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Build Quay, Docker Image Repository
+                    subtitle: Docker/quay.io - Build the docker containers and deploy to OpenShift
+                    icon: w3-text-2017-navy-peony fab fa-docker
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Definite and implement YAML files
+                    subtitle: YAML configuration - Configure the deployment scripts for the platform containers
+                    icon: w3-text-2017-navy-peony fad fa-file-lines
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Define and implement support for elastic stack on IBM Cloud
+                    subtitle: IBM Cloud infrastructure w/elastic search - Develop strategy to containerize and deploy elastic stack
+                    icon: w3-text-2017-navy-peony fad fa-folder-magnifying-glass
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Define file system/driver support for IBM Cloud
+                    subtitle: IBM Cloud infrastructure file systems - Select and deploy the appropriate file system(s)
+                    icon: w3-text-2017-navy-peony fad fa-floppy-disk-circle-arrow-right
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Define and Implement Postgres and MySQL support on IBM Cloud
+                    subtitle: DB services on IBM Cloud infrastructure - Select and deploy Postgres service or build DB container
+                    icon: w3-text-2017-navy-peony fad fa-server
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Implement monitoring tools Prometheus/Grafana
+                    subtitle: Prometheus/Grafana - Configure and deploy monitoring, reporting and visualization tools
+                    icon: w3-text-2017-navy-peony fad fa-monitor-waveform
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Implement support for MinIO
+                    subtitle: MinIO - Strategize, configure and deploy open S3 configuration
+                    icon: w3-text-2017-navy-peony fad fa-object-intersect
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Implement Jenkins for CI/CD
+                    subtitle: Jenkins - Develop CI/CD pipelines for the platform
+                    icon: w3-text-2017-navy-peony fad fa-bolt-auto
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Implement Argo CD for deployment to k8s
+                    subtitle: Argo CD
+                    icon: w3-text-2017-navy-peony fad fa-flux-capacitor
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Implement Jaeger monitoring tools
+                    subtitle: Jaeger
+                    icon: w3-text-2017-navy-peony fad fa-chart-candlestick
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Implement Helm charts
+                    subtitle: Helm
+                    icon: w3-text-2017-navy-peony fad fa-ship
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Penetration Monitoring and Testing 
+                    subtitle: OPSEC
+                    icon: w3-text-2017-navy-peony fad fa-shield-check
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
+                  - title: Disaster Recovery Planning
+                    subtitle: Backup & Recovery
+                    icon: w3-text-2017-navy-peony fad fa-file-export
+                    link: https://github.com/ActiveLearningStudio/rh-team-19/issues
+
           - segue2: Would you like to make an impact in healthcare?
             title: ChRIS Project
             subtitle: You can help bring open computing and medical imaging to the world
@@ -407,6 +652,13 @@ tree:
             icon: w3-text-2017-navy-peony fad fa-browser
             children: []
     
+          - title: Mobile Apps
+            subtitle: Can you help build a mobile application? 
+            segue1: So you're a mobile application builder? 
+            segue2: Come build a new mobile app. 
+            icon: w3-text-2017-navy-peony fad fa-mobile
+            children: []
+    
           - title: QA and Testing
             subtitle: as they say, "if it's not tested, it's broken"
             icon: w3-text-2017-navy-peony far fa-tachometer-fastest
@@ -440,6 +692,13 @@ tree:
             icon: w3-text-2017-navy-peony fab fa-readme
             segue1: Ready to write some documentation? 
             segue2: Let's find where to get started. 
+            children: []
+    
+          - title: Marketing
+            subtitle: Great projects require great leadership
+            icon: w3-text-2017-navy-peony fad fa-bullseye-pointer
+            segue1: Help plan and execute the launch. 
+            segue2: Steer the design, and get the word out! 
             children: []
 
       - title: Achievements
